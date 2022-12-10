@@ -3,7 +3,7 @@
 namespace Tests;
 
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Application;
+use Themosis\Core\Application;
 use L5Swagger\ConfigFactory;
 use L5Swagger\Exceptions\L5SwaggerException;
 use L5Swagger\Generator;
