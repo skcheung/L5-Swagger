@@ -52,6 +52,7 @@ class SecurityDefinitionsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider provideConfigAndSchemes
      *
      * @param  array  $securitySchemes
@@ -97,7 +98,7 @@ class SecurityDefinitionsTest extends TestCase
     /**
      * @return iterable
      */
-    public function provideConfigAndSchemes(): iterable
+    public static function provideConfigAndSchemes(): iterable
     {
         $securitySchemes = [
             'new_api_key_securitye' => [

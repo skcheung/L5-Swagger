@@ -26,6 +26,7 @@ class ConfigFactoryTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider configDataProvider
      *
      * @param  array  $data
@@ -57,7 +58,7 @@ class ConfigFactoryTest extends TestCase
         $this->assertArraySimilar($config, $assert);
     }
 
-    public function configDataProvider(): array
+    public static function configDataProvider(): array
     {
         return [
             [

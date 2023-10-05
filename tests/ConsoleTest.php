@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Artisan;
 use L5Swagger\Exceptions\L5SwaggerException;
@@ -13,11 +14,13 @@ class ConsoleTest extends TestCase
 {
     /**
      * @test
+     *
      * @dataProvider provideGenerateCommands
      *
      * @param  string  $artisanCommand
      *
      * @throws L5SwaggerException
+     * @throws FileNotFoundException
      */
     public function canGenerate(string $artisanCommand): void
     {
@@ -38,7 +41,7 @@ class ConsoleTest extends TestCase
     /**
      * @return iterable
      */
-    public function provideGenerateCommands(): iterable
+    public static function provideGenerateCommands(): iterable
     {
         yield 'default' => [
             'artisanCommand' => 'l5-swagger:generate',
